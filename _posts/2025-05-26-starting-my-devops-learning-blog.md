@@ -1,6 +1,6 @@
 ---
 title: "Starting My DevOps Learning Blog"
-date: 2025-05-21 10:00:00 +0900
+date: 2025-05-26 10:00:00 +0900
 categories: [DevOps, AWS]
 tags: [blog-log, github-actions, note]
 ---
