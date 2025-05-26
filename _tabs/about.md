@@ -17,7 +17,3 @@ This blog is a public notebook to document everything I learn — from AWS and C
 - Docker & Kubernetes
 - Terraform (IaC)
 - Linux Scripting
-
-
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
