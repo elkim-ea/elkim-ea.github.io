@@ -10,4 +10,4 @@ You can find my resume here.
 
 - 📌 AWS Certified DevOps Engineer – In Progress  
 - 🛠️ Tools: GitHub Actions, Docker, Terraform  
-- 📄 [Download Resume PDF](https://example.com/resume.pdf)
+
