@@ -1,0 +1,28 @@
+/* custom.scss */
+
+body {
+  background-color: #121212;
+  color: #eeeeee;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #81d4fa;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.sidebar {
+  background-color: #1e1e1e;
+}
+
+.site-title {
+  color: #ffcc00;
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: #aaa;
+}
