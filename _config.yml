@@ -1,5 +1,5 @@
 # The Site Configuration
-avatar: https://avatars.githubusercontent.com/elkim-ea
+avatar: "/assets/img/your-avatar.png"
 
 # Import the theme
 theme: jekyll-theme-chirpy
@@ -92,8 +92,7 @@ theme_mode: auto
 # e.g. 'https://cdn.com'
 cdn:
 
-# the avatar on sidebar, support local or CORS resources
-avatar:
+
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
