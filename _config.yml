@@ -29,8 +29,8 @@ url: "https://elkim-ea.github.io"
 github:
   username: elkim-ea # change to your GitHub username
 
-twitter:
-  username: twitter_username # change to your Twitter username
+# twitter:
+#   username: twitter_username # change to your Twitter username
 
 social:
   name: Eunae Kim
