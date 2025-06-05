@@ -1,5 +1,6 @@
 # The Site Configuration
-avatar: /assets/img/avatar.png
+avatar: https://raw.githubusercontent.com/elkim-ea/elkim-ea.github.io/main/assets/img/avatar.png
+
 
 # Import the theme
 theme: jekyll-theme-chirpy
