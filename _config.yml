@@ -19,8 +19,8 @@ title: "The DevOps Journey: From Zero to Engineer"
 
 tagline: A text-focused Jekyll theme # it will display as the subtitle
 
-description: >- 
-	This blog documents my journey from a non-technical background to becoming a DevOps Engineer. Follow along as I explore core concepts, hands-on projects, and problem-solving in Git, Docker, Kubernetes, AWS, CI/CD, and more. This is my professional learning log and a growing portfolio for my career in DevOps.
+description: >-
+This blog documents my journey from a non-technical background to becoming a DevOps Engineer. Follow along as I explore core concepts, hands-on projects, and problem-solving in Git, Docker, Kubernetes, AWS, CI/CD, and more. This is my professional learning log and a growing portfolio for my career in DevOps.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
