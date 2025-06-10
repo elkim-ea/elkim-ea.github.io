@@ -13,7 +13,7 @@ timezone: Asia/Seoul # 서울 시간대로 설정했습니다.
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
-Avatar: assets/img/avatar.png # Chirpy 테마의 기본 아바타 경로입니다. hoho.png를 이 경로에 복사해야 합니다.
+Avatar: /assets/lib/img/avatar.png # Chirpy 테마의 기본 아바타 경로입니다. hoho.png를 이 경로에 복사해야 합니다.
 
 title: "The DevOps Journey: From Zero to Engineer" # 콜론(:) 포함 시 큰따옴표 필수
 
