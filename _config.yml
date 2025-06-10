@@ -9,20 +9,21 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone:
+timezone: Asia/Seoul # 서울 시간대로 설정했습니다.
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
-Avatar: assets/img/avatar.png
+Avatar: assets/img/favicons/avatar.png # Chirpy 테마의 기본 아바타 경로입니다. hoho.png를 이 경로에 복사해야 합니다.
 
-title: "The DevOps Journey: From Zero to Engineer"
+title: "The DevOps Journey: From Zero to Engineer" # 콜론(:) 포함 시 큰따옴표 필수
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+tagline: A non-technical background's systematic approach to mastering DevOps. # 서브타이틀
+# it will display as the subtitle
 
 description: >-
-This blog documents my journey from a non-technical background to becoming a DevOps Engineer.
-Follow along as I explore core concepts, hands-on projects, and problem-solving in Git, Docker, Kubernetes, AWS, CI/CD, and more.
-This is my professional learning log and a growing portfolio for my career in DevOps.
+  This blog documents my journey from a non-technical background to becoming a DevOps Engineer.
+  Follow along as I explore core concepts, hands-on projects, and problem-solving in Git, Docker, Kubernetes, AWS, CI/CD, and more.
+  This is my professional learning log and a growing portfolio for my career in DevOps.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -39,13 +40,13 @@ social:
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: EunAe Kim
   email: elkim0118@gmail.com
-  links: 
+  links:
     # The first element serves as the copyright owner's link
     #- https://twitter.com/username # change to your Twitter homepage
-    - "https://github.com/elkim-ea"
+    - https://github.com/elkim-ea
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    - "https://www.linkedin.com/in/eunae-kim-6b2667313"
+    - "https://www.linkedin.com/in/eunae-kim-6b2667313" # 끝에 큰따옴표가 닫히도록 수정했습니다.
 
 # Site Verification Settings
 webmaster_verifications:
@@ -88,8 +89,8 @@ pageviews:
 #
 # Available options:
 #
-#     light — Use the light color scheme
-#     dark — Use the dark color scheme
+#       light — Use the light color scheme
+#       dark — Use the dark color scheme
 #
 theme_mode: # [light | dark]
 
@@ -101,7 +102,11 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+# 이 avatar는 위에 SEO tag 안의 Avatar와는 다릅니다. 이쪽이 Chirpy 테마의 메인 아바타입니다.
+# Chirpy 테마는 기본적으로 `assets/img/favicons/avatar.jpg` 파일을 사용합니다.
+# `hoho.png` 파일을 이 경로에 복사하거나 이름을 변경해야 합니다.
+avatar: /assets/img/favicons/avatar.png
+
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
