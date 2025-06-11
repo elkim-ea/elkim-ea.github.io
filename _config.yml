@@ -15,9 +15,9 @@ timezone: Asia/Seoul # 서울 시간대로 설정했습니다.
 # ↓ --------------------------
 Avatar: /assets/lib/img/avatar.png # Chirpy 테마의 기본 아바타 경로입니다. hoho.png를 이 경로에 복사해야 합니다.
 
-title: "The DevOps Journey: From Zero to Engineer" # 콜론(:) 포함 시 큰따옴표 필수
+title: "EunAe Kim" # 콜론(:) 포함 시 큰따옴표 필수
 
-tagline: A non-technical background's systematic approach to mastering DevOps. # 서브타이틀
+tagline: The DevOps Journey: From Zero to Engineer # 서브타이틀
 # it will display as the subtitle
 
 description: >-
