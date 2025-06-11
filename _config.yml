@@ -17,7 +17,7 @@ Avatar: /assets/lib/img/avatar.png # Chirpy 테마의 기본 아바타 경로입
 
 title: "EunAe Kim" # 콜론(:) 포함 시 큰따옴표 필수
 
-tagline: The DevOps Journey: From Zero to Engineer # 서브타이틀
+tagline: The DevOps Journey - From Zero to Engineer # 서브타이틀
 # it will display as the subtitle
 
 description: >-
