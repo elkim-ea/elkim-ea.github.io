@@ -20,11 +20,11 @@ tags: [Python, basic, Interpreter language, Features]
 -  Python has a very simple and concise syntax that closely resembles the human thought process. A language that is easy to learn and easy to use is the best language.     
 ### 3) Free but powerful
 - Python is open source and free software. You can download and use Python anytime, anywhere, without worrying about paying for it.     
-> A Python library is a collection of pre-made Python files that you can load and use when writing Python programs.
+> A Python library is a collection of pre-made Python files that you can load and use when writing Python programs.           
 ### 4) Simple
-- Guido made Python intentionally simple.  This philosophy of simplicity is reflected in the Python syntax, which allows Python programmers to see well-organized source code. This makes it easy to understand other people's source code and makes collaboration and maintenance very convenient.
-- You can tell that the code is well-lined by the lack of parentheses ({}) separating paragraphs, which is common in other languages. Python programs don't run unless they're well-lined. You don't line up your code to make it pretty, you line up your code to make it run. Writing code in this way helps with readability.
-> Lining up code like this is called “indenting”. Python will not run a program without indentation.
+- Guido made Python intentionally simple.  This philosophy of simplicity is reflected in the Python syntax, which allows Python programmers to see well-organized source code. This makes it easy to understand other people's source code and makes collaboration and maintenance very convenient.      
+- You can tell that the code is well-lined by the lack of parentheses ({}) separating paragraphs, which is common in other languages. Python programs don't run unless they're well-lined. You don't line up your code to make it pretty, you line up your code to make it run. Writing code in this way helps with readability.      
+> Lining up code like this is called “indenting”. Python will not run a program without indentation.             
 ### 5) It makes programming fun
-- This is the part I want to emphasize the most. No other language has made me enjoy programming as much as Python. Python allows programmers to focus on the functionality they want to create without having to worry about other side concepts or limitations.
+- This is the part I want to emphasize the most. No other language has made me enjoy programming as much as Python. Python allows programmers to focus on the functionality they want to create without having to worry about other side concepts or limitations.        
 ### 6) It's fast to develop
