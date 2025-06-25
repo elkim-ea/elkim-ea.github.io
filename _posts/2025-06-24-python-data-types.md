@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What is Python?"
-date: 2025-06-25
+date: 2025-06-24 
 categories:
   - "Programming/Python" # Programming > Python 하위 카테고리
 tags: [Python, Basic, Interpreter language, Features]
@@ -36,12 +36,3 @@ tags: [Python, Basic, Interpreter language, Features]
 - This is the part I want to emphasize the most. No other language has made me enjoy programming as much as Python. Python allows programmers to focus on the functionality they want to create without having to worry about other side concepts or limitations.          
 
 ### 6) It's fast to develop
-
--------
-02장 파이썬 프로그래밍의 기초, 자료형
-1. 숫자형
-- 숫자형(Number)이란 숫자 형태로 이루어진 자료형으로, 우리가 이미 잘 알고 있는 것이다. 우리가 흔히 사용하는 숫자들을 생각해 보자. 123과 같은 정수, 12.34와 같은 실수, 8진수나 16진수도 있다.
-1)숫자형은 어떻게 만들고 사용할까?
--  정수형(integer)이란 말 그대로 정수를 뜻하는 자료형을 말한다. 다음은 양의 정수와 음의 정수, 숫자 0을 변수 a에 대입하는 예이다.
--  실수형
-파이썬에서 실수형(floating-point)은 소수점이 포함된 숫자를 말한다. 다음은 실수를 변수 a에 대입하는 예이다. 일반적으로 볼 수 있는 실수형의 소수점 표현 방식이다.
