@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jenkins_NCP (Naver Cloud)"
-date: 2025-09-03:01 +0900
+date: 2025-09-03
 categories:
   - "AWS/Naver Cloud" 
 tags: [Naver, 클라우드, 기초] 
