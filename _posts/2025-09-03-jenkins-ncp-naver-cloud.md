@@ -19,41 +19,41 @@ We will build the environment step by step as illustrated in the diagram above.
 
 ### 1. Naver Cloud 생성하기 ( Create a Naver Cloud instance )
 
-<img src="images/NaverCloud/스크린샷 2025-09-03 195629.png" alt="alt text" width="500">            
+<img src="images/NaverCloud/2025-09-03 195629.png" alt="alt text" width="500">            
 1) 네이버 클라우드에 가입하고 콘솔에들어간다.(Sign up for Naver Cloud and log in to the console. )                                
 
-<img scr="_posts/images/NaverCloud/스크린샷 2025-09-03 190419.png" alt="alt text" width="500">          
+<img scr="_posts/images/NaverCloud/2025-09-03 190419.png" alt="alt text" width="500">          
 1) 필요한 것은 즐겨찾기로 추가시켜놓는다.( Add frequently used services to Favorites for quick access. )         
 
 ### 2. VPC 생성하기 ( Set up a VPC (Virtual Private Cloud) )
-<img scr="_posts/images/NaverCloud/스크린샷 2025-09-03 190435.png" alt="alt text" width="500">             
+<img scr="_posts/images/NaverCloud/2025-09-03 190435.png" alt="alt text" width="500">             
 1) VPC를 생성해준다. 위의 그림과 같이 10.0.0.0/16로 정해준다.( Create a VPC — set the CIDR block to 10.0.0.0/16, as shown in the diagram above. )     
 
 ### 3. Subnet 생성하기 ( Configure a Subnet )
-<img scr="_posts/images/NaverCloud/스크린샷 2025-09-03 190558.png" alt="alt text" width="500">        
+<img scr="_posts/images/NaverCloud/2025-09-03 190558.png" alt="alt text" width="500">        
 1) Subnet도 생성해준다. 이 또한 10.0.1.0/24로 정해준다.( Create a Subnet — set the CIDR block to 10.0.1.0/24. )                 
 
 ### 4. ACL (방화벽) 생성하기
-<img scr="_posts/images/NaverCloud/스크린샷 2025-09-03 191159.png" alt="alt text" width="500">          
-<img scr="_posts/images/NaverCloud/스크린샷 2025-09-03 191219.png" alt="alt text" width="500">                    
-<img scr="_posts/images/NaverCloud/스크린샷 2025-09-03 191229.png" alt="alt text" width="500">        
+<img scr="_posts/images/NaverCloud/2025-09-03 191159.png" alt="alt text" width="500">          
+<img scr="_posts/images/NaverCloud/2025-09-03 191219.png" alt="alt text" width="500">                    
+<img scr="_posts/images/NaverCloud/2025-09-03 191229.png" alt="alt text" width="500">        
 1) 방화벽은 자동으로 만들어 주지만 따로 우리가 만들 수 있다.( A firewall is created automatically, but we can also create one manually if needed. )       
 2) Inbound와 Outbound는 각각 만들어야한다.( Inbound and Outbound rules must be configured separately. )               
 3) Inbound는 밖에서 안이다.( Inbound means traffic coming from outside to inside. )                  
 4) Outbound는 안에서 밖이다.( Outbound means traffic going from inside to outside. )                    
 
 ### 5. ACG( 보안그룹) 생성하기
-<img scr="_posts/images/NaverCloud/스크린샷 2025-09-03 191517.png" alt="alt text" width="500">                      
-<img scr="_posts/images/NaverCloud/스크린샷 2025-09-03 191534.png" alt="alt text" width="500">              
+<img scr="_posts/images/NaverCloud/2025-09-03 191517.png" alt="alt text" width="500">                      
+<img scr="_posts/images/NaverCloud/2025-09-03 191534.png" alt="alt text" width="500">              
 1) ACL 생성처럼 Inbound와 Outbound를 생성하면된다.( When creating an ACL, you need to configure both Inbound and Outbound rules.)                             
 2) ACL과 다르게 ACG는 Inbound만 만들어도 자동으로 Outbound가 생성된다.( Unlike ACLs, ACGs automatically create Outbound rules when you configure only the Inbound rules.)                
 
 ### 6. NCP Jenkins Server와 NCP Deploy Server 생성하기 ( Launch an NCP Jenkins Server and an NCP Deploy Server )              
-<img scr="_posts/images/NaverCloud/스크린샷 2025-09-03 192058.png" alt="alt text" width="500">                         
-<img scr="_posts/images/NaverCloud/스크린샷 2025-09-03 193338.png" alt="alt text" width="500">            
-<img scr="_posts/images/NaverCloud/스크린샷 2025-09-03 193706.png" alt="alt text" width="500">                 
-<img scr="_posts/images/NaverCloud/스크린샷 2025-09-03 193836.png" alt="alt text" width="500">                       
-<img scr="_posts/images/NaverCloud/스크린샷 2025-09-03 194156.png" alt="alt text" width="500">                                  
+<img scr="_posts/images/NaverCloud/2025-09-03 192058.png" alt="alt text" width="500">                         
+<img scr="_posts/images/NaverCloud/2025-09-03 193338.png" alt="alt text" width="500">            
+<img scr="_posts/images/NaverCloud/2025-09-03 193706.png" alt="alt text" width="500">                 
+<img scr="_posts/images/NaverCloud/2025-09-03 193836.png" alt="alt text" width="500">                       
+<img scr="_posts/images/NaverCloud/2025-09-03 194156.png" alt="alt text" width="500">                                  
 1) Server를 처음에 생성하고 keypair.pem을 발급 받는다. ( Create the server first and issue the keypair.pem file. )                 
 2) 그리고 Jenkins Server부터 만든다 비공인 IP는 위의 그림과 같이 10.0.1.101로 한다.(Set up the Jenkins Server. As shown in the diagram above, assign the private IP address 10.0.1.101. )
 3) Jenkins Serveer처럼 Deploy Server를 만든다. ( Create the Deploy Server in the same way as the Jenkins Server. )
