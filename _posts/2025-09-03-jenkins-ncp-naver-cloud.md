@@ -19,7 +19,7 @@ We will build the environment step by step as illustrated in the diagram above.
 
 ### 1. Naver Cloud 생성하기 ( Create a Naver Cloud instance )
 
-<img src="/images/NaverCloud/2025-09-03-195629.png" alt="alt text" width="500">            
+<img src="images/NaverCloud/2025-09-03-195629.png" alt="alt text" width="500">            
 1) 네이버 클라우드에 가입하고 콘솔에들어간다.(Sign up for Naver Cloud and log in to the console. )                                
 
 <img scr="/images/NaverCloud/2025-09-03-190419.png" alt="alt text" width="500">          
