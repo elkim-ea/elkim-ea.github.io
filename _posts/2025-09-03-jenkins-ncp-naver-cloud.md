@@ -6,7 +6,7 @@ categories:
   - "AWS/Naver Cloud" 
 tags: [Naver, 클라우드, 기초] 
 ---
-<img src="{{ 'images/NaverCloud/image.png' | relative_url }}" alt="스크린샷" width="500">
+<img src="{{ '/assets/img/images/NaverCloud/image.png' | relative_url }}" alt="스크린샷" width="500">
 
 위와 같은 그림으로 순서대로 만들어갈 것이다.
 We will build the environment step by step as illustrated in the diagram above.
@@ -24,31 +24,31 @@ We will build the environment step by step as illustrated in the diagram above.
 
 ### 1. Naver Cloud 생성하기 ( Create a Naver Cloud instance )
 
-<img src="{{ '/images/NaverCloud/2025-09-03-195629.png' | relative_url }}" alt="스크린샷" width="500">  
+<img src="{{ '/assets/img/images/NaverCloud/2025-09-03-195629.png' | relative_url }}" alt="스크린샷" width="500"> 
 
 1) 네이버 클라우드에 가입하고 콘솔에들어간다.(Sign up for Naver Cloud and log in to the console. )                                
 
-<img src="{{ '/images/NaverCloud/2025-09-03-190419.png' | relative_url }}" alt="스크린샷" width="500">
+<img src="{{ '/assets/img/images/NaverCloud/2025-09-03-190419.png' | relative_url }}" alt="스크린샷" width="500">
 
 1) 필요한 것은 즐겨찾기로 추가시켜놓는다.( Add frequently used services to Favorites for quick access. )         
 
 ### 2. VPC 생성하기 ( Set up a VPC (Virtual Private Cloud) )
 
-<img src="{{ '/images/NaverCloud/2025-09-03-190435.png' | relative_url }}" alt="스크린샷" width="500">  
+<img src="{{ '/assets/img/images/NaverCloud/2025-09-03-190435.png' | relative_url }}" alt="스크린샷" width="500">
 
 1) VPC를 생성해준다. 위의 그림과 같이 10.0.0.0/16로 정해준다.( Create a VPC — set the CIDR block to 10.0.0.0/16, as shown in the diagram above. )     
 
 ### 3. Subnet 생성하기 ( Configure a Subnet )
 
-<img src="{{ '/images/NaverCloud/2025-09-03-190558.png' | relative_url }}" alt="스크린샷" width="500">
+<img src="{{ '/assets/img/images/NaverCloud/2025-09-03-190558.png' | relative_url }}" alt="스크린샷" width="500">
 
 1) Subnet도 생성해준다. 이 또한 10.0.1.0/24로 정해준다.( Create a Subnet — set the CIDR block to 10.0.1.0/24. )                 
 
 ### 4. ACL (방화벽) 생성하기
 
-<img src="{{ '/images/NaverCloud/2025-09-03-191159.png' | relative_url }}" alt="스크린샷" width="500">       
-<img src="{{ '/images/NaverCloud/2025-09-03-191219.png' | relative_url }}" alt="스크린샷" width="500">                   
-<img src="{{ '/images/NaverCloud/2025-09-03-191229.png' | relative_url }}" alt="스크린샷" width="500">      
+<img src="{{ '/assets/img/images/NaverCloud/2025-09-03-191159.png' | relative_url }}" alt="스크린샷" width="500">    
+<img src="{{ '/assets/img/images/NaverCloud/2025-09-03-191219.png' | relative_url }}" alt="스크린샷" width="500">                 
+<img src="{{ '/assets/img/images/NaverCloud/2025-09-03-191229.png' | relative_url }}" alt="스크린샷" width="500">    
 
 1) 방화벽은 자동으로 만들어 주지만 따로 우리가 만들 수 있다.( A firewall is created automatically, but we can also create one manually if needed. )     
 
@@ -59,19 +59,19 @@ We will build the environment step by step as illustrated in the diagram above.
 4) Outbound는 안에서 밖이다.( Outbound means traffic going from inside to outside. )                               
 
 ### 5. ACG( 보안그룹) 생성하기
-<img src="{{ '/images/NaverCloud/2025-09-03-191517.png' | relative_url }}" alt="스크린샷" width="500">
-<img src="{{ '/images/NaverCloud/2025-09-03-191534.png' | relative_url }}" alt="스크린샷" width="500">              
+<img src="{{ '/assets/img/images/NaverCloud/2025-09-03-191517.png' | relative_url }}" alt="스크린샷" width="500">
+<img src="{{ '/assets/img/images/NaverCloud/2025-09-03-191534.png' | relative_url }}" alt="스크린샷" width="500">       
 
 1) ACL 생성처럼 Inbound와 Outbound를 생성하면된다.( When creating an ACL, you need to configure both Inbound and Outbound rules.)    
 
 2) ACL과 다르게 ACG는 Inbound만 만들어도 자동으로 Outbound가 생성된다.( Unlike ACLs, ACGs automatically create Outbound rules when you configure only the Inbound rules.)                  
 
 ### 6. NCP Jenkins Server와 NCP Deploy Server 생성하기 ( Launch an NCP Jenkins Server and an NCP Deploy Server )              
-<img src="{{ '/images/NaverCloud/2025-09-03-192058.png' | relative_url }}" alt="스크린샷" width="500">
-<img src="{{ '/images/NaverCloud/2025-09-03-193338.png' | relative_url }}" alt="스크린샷" width="500">
-<img src="{{ '/images/NaverCloud/2025-09-03-193706.png' | relative_url }}" alt="스크린샷" width="500">
-<img src="{{ '/images/NaverCloud/2025-09-03-193836.png' | relative_url }}" alt="스크린샷" width="500">
-<img src="{{ '/images/NaverCloud/2025-09-03-194156.png' | relative_url }}" alt="스크린샷" width="500">                                  
+<img src="{{ '/assets/img/images/NaverCloud/2025-09-03-192058.png' | relative_url }}" alt="스크린샷" width="500">
+<img src="{{ '/assets/img/images/NaverCloud/2025-09-03-193338.png' | relative_url }}" alt="스크린샷" width="500">
+<img src="{{ '/assets/img/images/NaverCloud/2025-09-03-193706.png' | relative_url }}" alt="스크린샷" width="500">
+<img src="{{ '/assets/img/images/NaverCloud/2025-09-03-193836.png' | relative_url }}" alt="스크린샷" width="500">
+<img src="{{ '/assets/img/images/NaverCloud/2025-09-03-194156.png' | relative_url }}" alt="스크린샷" width="500">                                
 
 1) Server를 처음에 생성하고 keypair.pem을 발급 받는다. ( Create the server first and issue the keypair.pem file. )         
 
