@@ -6,7 +6,7 @@ categories:
   - "AWS/Naver Cloud" 
 tags: [Naver, 클라우드, 기초] 
 ---
-<img src="{{ '/images/NaverCloud/image.png' | relative_url }}" alt="스크린샷" width="500">
+<img src="{{ 'images/NaverCloud/image.png' | relative_url }}" alt="스크린샷" width="500">
 
 위와 같은 그림으로 순서대로 만들어갈 것이다.
 We will build the environment step by step as illustrated in the diagram above.
