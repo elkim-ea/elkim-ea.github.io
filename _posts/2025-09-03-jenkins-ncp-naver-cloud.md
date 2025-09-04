@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jenkins_NCP (Naver Cloud)"
+title: "1. Jenkins_NCP (Naver Cloud) 생성하기 "
 date: 2025-09-03
 categories:
   - "AWS/Naver Cloud" 
