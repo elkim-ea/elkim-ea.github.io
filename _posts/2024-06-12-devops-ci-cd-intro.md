@@ -1,10 +1,13 @@
 ---
 layout: post
-title: "데브옵스 핵심: CI/CD의 이해"
-date: 2024-06-12 12:00:00 +0900
+title: "AWS Certified Solutions Architect - Associate 준비 과정"
+date: 2025-09-11 12:00:00 +0900
 categories:
-  - "DevOps/Terminology" # DevOps > Terminology 하위 카테고리
-tags: [DevOps, CI/CD, 용어]
+  - "Certification/AWS SAA" # DevOps > Terminology 하위 카테고리
+tags: [DevOps, AWS]
 ---
-Continuous Integration (CI)와 Continuous Delivery/Deployment (CD)에 대한 개념을 정리합니다.
+준비 기간 : 
+참고 문헌 : 
+공부 방식 : 
+자격증 공부방법 및앞으로 부족한점 등 적기
 ...
