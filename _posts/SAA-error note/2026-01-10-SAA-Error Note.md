@@ -29,6 +29,7 @@ It **does not allow inbound connections**.
 - The public subnet containing the NAT must have a route to the **Internet Gateway**
 
 ### Exam Strategy & Cheat Sheet:
+
 | Requirement                             | Placement / Configuration         |
 |----------------------------------------|-----------------------------------|
 | NAT Gateway                            | Public Subnet                     |
