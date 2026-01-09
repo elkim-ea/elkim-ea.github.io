@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " 3.AWS(SAA) - EC2 - Solutions Architect Associate Level (Kor.ver) "
+title: "1. AWS(SAA) VOCA "
 date: 2026-01-08
 categories:
   - "Certification/AWS SAA"

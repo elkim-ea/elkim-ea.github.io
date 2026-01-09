@@ -3,7 +3,7 @@ layout: post
 title: " Portfolio-ncp "
 date: 2025-12-03
 categories:
-  - "Portfolio" 
+  - "Portfolio/NCP" 
 tags: [NCP, 클라우드, 기초] 
 ---
 # 🚀 Naver Cloud(NCP) 기반 DevOps CI/CD 구축기  
