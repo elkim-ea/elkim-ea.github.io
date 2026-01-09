@@ -46,3 +46,25 @@ tags: [SAA, 클라우드, 기초, VOCA]
 - Recover : To get something back after it was lost, deleted, broken, or stopped working.
 
 - Configuration : The settings or arragement of a system, service, or software that controls how it behave.
+
+- Integrity : Making sure data is correct, complete, and not changed in an unauthorized or unexpected way.
+
+- Unauthorized : Not allowed, not approved, or no permission to do something.
+
+- Ephemeral : Something that exists only for a short time and then disappears.
+
+- Buffer : A temporary area in memory used to hold data while it's being moved, processed, or transferred.
+
+- Replication : Copying data or resources from one place to another, usually to improve availability, durability, and performance.
+
+- Cache : A temporary storage area that saves data so it can be quickly accessed later — without reloading.
+
+- Scratch data : This is a useful term in Cloud, computing, and temporary storage contexts.
+
+- High-throughput : The ability to process or transfer a large amount data or requests in a short peroid of time.
+
+- Mission-critical : A system, application, or process that is essential to the success or operation of a bussiness - if it fails, it causes major damage or downtime.
+
+- Intensive workloads : Tasks or applications that require a lot of system resources, such as CPU, memory(RAM), disk I/O, or network bandwidth. 
+
+- Burst : A short period of extra performance or speed that goes beyond the usual limit.
