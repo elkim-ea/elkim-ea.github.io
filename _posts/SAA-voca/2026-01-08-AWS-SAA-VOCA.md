@@ -68,3 +68,13 @@ tags: [SAA, 클라우드, 기초, VOCA]
 - Intensive workloads : Tasks or applications that require a lot of system resources, such as CPU, memory(RAM), disk I/O, or network bandwidth. 
 
 - Burst : A short period of extra performance or speed that goes beyond the usual limit.
+
+- Sustained : Something that is maintained continuously over time - not temporary or short burst.
+
+- Consistency : Making sure that data stays the same (correct and up-to-date) across all systems or locations.
+
+- Sub-millisecond : a time delay or response time that is less than 1 millisecoond (ms) - 1 millisecond = 1/1000 of a second.
+
+- Optimized : Something has been improved or tuned to perform better - usually in terms of speed, cost, resource usage, or efficiency.
+
+- Concurrent : Happening at the same time
