@@ -77,4 +77,28 @@ tags: [SAA, 클라우드, 기초, VOCA]
 
 - Optimized : Something has been improved or tuned to perform better - usually in terms of speed, cost, resource usage, or efficiency.
 
-- Concurrent : Happening at the same time
+- Concurrent : Happening at the same time.
+
+- Decryption : The process of unlocking encrypted data so it can be read or used again.
+
+- Leverage : To use something effectively to gain an advantage or achieve a goal.
+
+- Protocal : A set of rules or standards that define how data is sent, revised, and understood between devices, systems, or applications.
+
+- Compatible : Able to work together correctly without problems or conflicts.
+
+- Conflict : When two or more things try to happen at the same time or in the same place, and they don't work together - causing an error, crash, or unexpected behavior.
+
+- Petabyte-scale : A system,service, or architecture that is designed to handle, store, or process data in the petabyte (PB) range - that's 1,000 terabytes or 1 million gigabytes.
+
+- Sensitive : Something that is private, confidential, or easily affected - and needs extra protection or careful handling.
+
+- Parallel : Multiple tasks or processes happening at the exact same time, usually on separate CPUs, cores, or machines.
+
+- Provisioned : To set up, allocate, and prepare resources (like servers, databases, or storage) so they are ready to use.
+
+- Retrieve : To get something back, especially data or information that is stored somewhere.
+
+- Durablilty : The ability of data to last over time without being lost, corrupted, or deleted unexpectedly.
+
+- Corrupted : Damaged broken, or changed in a bad way, so the data no longer works or is unreadable.
