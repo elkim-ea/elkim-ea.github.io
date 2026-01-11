@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: page
 title: GCP Portfolio
 permalink: /portfolio/gcp/
@@ -256,4 +256,4 @@ PORTFOLIO
 ✔ Front/Back을 각각 External LoadBalancer로 외부 공개  
 ✔ DB는 Cluster 내부 통신(ClusterIP)으로 보안성 유지  
 ✔ Cloud NAT 기반 Outbound 트래픽 제어(Private egress)
-
+ -->
