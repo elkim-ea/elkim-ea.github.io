@@ -36,7 +36,7 @@ Below is the complete CI/CD workflow:
 
 **NCP Architecture Diagram**
 
-<img src="./docs(eng)/architecture-ncp.png" width="800">
+<img src="/assets/img/portfolio/architecture-ncp.png" width="800">
 
 
 ## 2. Network Configuration (VPC / Subnet / Routing / NAT)
@@ -61,7 +61,7 @@ Below is the complete CI/CD workflow:
 
 Subnet List Screenshot
 
-<img src="./docs(eng)/subnet-list.png" width="700">
+<img src="/assets/img/portfolio/subnet-list.png" width="700">
 
 ### ✔ 2-3) Routing Table (Private Subnet)
 
@@ -72,7 +72,7 @@ Subnet List Screenshot
 
 NAT Gateway Screenshot  
 
-<img src="./docs(eng)/nat-gateway.png" width="700">
+<img src="/assets/img/portfolio/nat-gateway.png" width="700">
 
 ## 3. Security Configuration (ACG)
 
@@ -94,8 +94,8 @@ NAT Gateway Screenshot
 
 ACG Screenshots 
 
-<img src="./docs(eng)/jenkins-acg.png" width="700">  
-<img src="./docs(eng)/deploy-acg.png" width="700">
+<img src="/assets/img/portfolio/jenkins-acg.png" width="700">  
+<img src="/assets/img/portfolio/deploy-acg.png" width="700">
 
 
 ## 4. Server Configuration
@@ -120,11 +120,11 @@ ACG Screenshots
 
 Jenkins UI  
 
-<img src="./docs(eng)/jenkins-dashboard.png" width="700">
+<img src="/assets/img/portfolio/jenkins-dashboard.png" width="700">
 
 Jenkins Build Trend 
 
-<img src="./docs(eng)/jenkins-trend.png" width="700">
+<img src="/assets/img/portfolio/jenkins-trend.png" width="700">
 
 
 ### ✔ Jenkinsfile (Summary)

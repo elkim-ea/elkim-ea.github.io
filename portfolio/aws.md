@@ -35,7 +35,7 @@ Below is an overview of the system’s complete **CI/CD and runtime flow**.
 
 **Final ECS Fargate Architecture Diagram**
 
-<img src="./docs(eng)/architecture-ecs-final.png" width="800">
+<img src="/assets/img/portfolio/architecture-ecs-final.png" width="800">
 
 ### Architecture Design Principles
 
