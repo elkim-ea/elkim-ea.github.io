@@ -1,44 +1,40 @@
 ---
-layout: default
+layout: home
 ---
 
 <section class="home-intro">
-  <h1>Hi, I'm EunAe Kim</h1>
-  <p>
-    DevOps Engineer · Multi-Cloud (NCP · GCP · AWS)<br>
+  <h1>Hi, I'm <span style="color: var(--link-color);">EunAe Kim</span></h1>
+  <p class="text-muted">
+    <strong>DevOps Engineer</strong> · Multi-Cloud (NCP · GCP · AWS)<br>
     From Zero to Engineer
   </p>
 
-  <div class="home-buttons d-flex gap-3 justify-content-start mt-4">
-    <a href="/assets/cv/EunAe_Kim_CV.pdf" class="btn btn-custom btn-cv">
-      <i class="fas fa-file-alt me-2"></i>CV
+  <div class="home-buttons d-flex justify-content-center flex-wrap mt-4">
+    <a href="/assets/cv/EunAe_Kim_CV.pdf" class="btn-custom btn-cv" target="_blank">
+      <i class="fas fa-file-pdf"></i> CV
     </a>
-
-    <a href="/assets/cv/EunAe_Kim_CV.pdf" class="btn btn-custom btn-cert">
-      <i class="fas fa-certificate me-2"></i>Certification
+    <a href="/assets/cv/EunAe_Kim_CV.pdf" class="btn-custom btn-cert" target="_blank">
+      <i class="fas fa-award"></i> Certification
     </a>
   </div>
 </section>
 
-<hr>
+<hr style="opacity: 0.1; margin: 3rem 0;">
 
 <section class="portfolio-section">
-  <h2>Portfolio</h2>
-
+  <h2 class="text-center mb-4" style="font-weight: 800;">Portfolio</h2>
   <div class="portfolio-grid">
     <a href="/portfolio/ncp/" class="portfolio-card">
-      <h3>NCP</h3>
-      <p>Jenkins · Docker · NAT</p>
+      <h3><i class="fas fa-server me-2"></i>NCP</h3>
+      <p>Jenkins · Docker · NAT Gateway</p>
     </a>
-
     <a href="/portfolio/gcp/" class="portfolio-card">
-      <h3>GCP</h3>
-      <p>GKE · GitHub Actions</p>
+      <h3><i class="fab fa-google-cloud me-2"></i>GCP</h3>
+      <p>GKE · GitHub Actions · Cloud Run</p>
     </a>
-
     <a href="/portfolio/aws/" class="portfolio-card">
-      <h3>AWS</h3>
-      <p>ECS · ALB · Terraform</p>
+      <h3><i class="fab fa-aws me-2"></i>AWS</h3>
+      <p>ECS · ALB · Terraform · S3</p>
     </a>
   </div>
 </section>

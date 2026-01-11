@@ -1,70 +1,121 @@
+/* --- 공통 변수 스타일 --- */
+:root {
+  --card-border-radius: 12px;
+  --card-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 1. 홈 소개 섹션 정렬 */
 .home-intro {
   text-align: center;
-  margin-top: 2rem;
+  padding: 3rem 0;
 }
 
-.home-buttons .btn {
+.home-intro h1 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 2. 버튼 & 포트폴리오 카드 디자인 통합 */
+.btn-custom, .portfolio-card {
+  background: var(--card-bg) !important; /* 카드 배경색 통일 */
+  border-radius: var(--card-border-radius) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--card-transition) !important;
+}
+
+/* 버튼 전용 상세 설정 */
+.btn-custom {
+  padding: 12px 28px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-color) !important;
   margin: 0.5rem;
+  font-size: 1rem;
 }
 
+/* 호버 효과 통합 (위로 뜨는 효과) */
+.btn-custom:hover, .portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  border-color: var(--link-color) !important;
+  text-decoration: none !important;
+}
+
+/* 포인트 컬러 적용 */
+.btn-cert {
+  border: 1px solid var(--link-color) !important;
+}
+
+.btn-custom i {
+  color: var(--link-color);
+  margin-right: 8px;
+}
+
+/* 3. 포트폴리오 그리드 레이아웃 */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
-.portfolio-card {
-  padding: 1.5rem;
-  background: var(--card-bg);
-  border-radius: 12px;
-  text-decoration: none;
-  transition: transform 0.2s;
+.portfolio-card h3 {
+  color: var(--link-color);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
-.portfolio-card:hover {
-  transform: translateY(-5px);
+.portfolio-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
 }
 
-/* 홈 버튼 커스텀 스타일 - 테마 통합형 */
+//* 홈 버튼 커스텀 스타일 - 고대비 버전 */
 .btn-custom {
-  padding: 10px 24px;
-  border-radius: 8px; /* 캡슐형보다 조금 더 각진 세련된 느낌 */
-  font-weight: 600;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: all 0.3s ease;
   text-decoration: none !important;
   display: inline-flex;
   align-items: center;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
 }
 
-/* CV 버튼: 투명한 스타일 (Ghost Button) */
+/* CV 버튼: 테두리를 강조하고 글자를 밝게 */
 .btn-cv {
-  border: 1.5px solid var(--text-muted);
-  color: var(--text-color) !important;
+  border: 2px solid var(--link-color); /* 테마의 링크 색상을 테두리로 */
+  color: var(--link-color) !important;
   background: transparent;
 }
 
 .btn-cv:hover {
-  background-color: var(--text-muted);
-  color: var(--main-wrapper-bg) !important;
-  transform: translateY(-2px);
+  background-color: var(--link-color);
+  color: #fff !important; /* 호버 시 글자색은 무조건 흰색 */
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Certification 버튼: 대비가 강한 스타일 */
+/* Certification 버튼: 배경을 꽉 채워서 시인성 극대화 */
 .btn-cert {
-  background-color: var(--text-color); /* 테마의 텍스트 색상을 버튼 배경으로 */
-  color: var(--main-wrapper-bg) !important; /* 배경색을 글자색으로 (반전 효과) */
-  border: 1.5px solid var(--text-color);
+  background-color: var(--link-color); /* 테마 포인트 컬러 사용 */
+  color: #fff !important; /* 글자는 흰색으로 고정하여 가독성 확보 */
+  border: 2px solid var(--link-color);
 }
 
 .btn-cert:hover {
-  filter: brightness(1.2); /* 살짝 밝아지는 효과 */
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.15); /* 살짝 더 밝게 */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* 다크모드 전용 미세 조정 (선택사항) */
-[data-mode='dark'] .btn-cert:hover {
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+/* 아이콘 간격 조절 */
+.btn-custom i {
+  margin-right: 10px;
+  font-size: 1.1rem;
 }
