@@ -3,8 +3,7 @@ layout: post
 title: " 1. SAA Error Notebook "
 date: 2026-01-10
 categories:
-  - "Error Notebook/SAA" 
-tags: [SAA] 
+  - "Error Notebook" 
 ---
 
 # Q2.

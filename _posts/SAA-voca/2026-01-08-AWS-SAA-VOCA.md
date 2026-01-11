@@ -3,8 +3,7 @@ layout: post
 title: "1. AWS(SAA) VOCA "
 date: 2026-01-08
 categories:
-  - "Certification/AWS SAA"
-tags: [SAA, 클라우드, 기초, VOCA] 
+  - "VOCA" 
 ---
 
 #### Reference

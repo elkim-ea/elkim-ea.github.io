@@ -4,7 +4,6 @@ title: "AWS Certified Solutions Architect - Associate 준비 과정"
 date: 2025-09-11
 categories:
   - "Certification/AWS SAA" # DevOps > Terminology 하위 카테고리
-tags: [DevOps, AWS]
 ---
 준비 기간 : 
 참고 문헌 : 

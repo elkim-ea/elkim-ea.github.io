@@ -4,7 +4,6 @@ title: "1. Jenkins_NCP (Naver Cloud) 생성하기 "
 date: 2025-09-03
 categories:
   - "AWS/Naver Cloud" 
-tags: [Naver, 클라우드, 기초] 
 ---
 <img src="{{ '/assets/img/images/NaverCloud/image.png' | relative_url }}" alt="스크린샷" width="500">
 

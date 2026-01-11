@@ -4,7 +4,6 @@ title: "Cloud 필수 용어 정리 - 2 (Kor.ver)"
 date: 2025-11-19
 categories:
   - "Cloud" 
-tags: [클라우드, 기초, Korean] 
 ---
 # 🐳 6️⃣ 컨테이너 및 오케스트레이션 (Containerization & Orchestration)
 
