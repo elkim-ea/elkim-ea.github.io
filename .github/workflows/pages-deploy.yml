@@ -52,7 +52,7 @@ jobs:
 
       - name: Test site
         run: |
-          bundle exec htmlproofer _site --allow-missing-alt true --check-html --disable-external
+          bundle exec htmlproofer _site --ignore-empty-alt --ignore-missing-alt --check-html --disable-external
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
