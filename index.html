@@ -1,40 +1,47 @@
 ---
-layout: default
+layout: page
 ---
 
-<section class="home-intro">
-  <h1>Hi, I'm <span style="color: var(--link-color);">EunAe Kim</span></h1>
-  <p class="text-muted">
+<div style="text-align: center; padding: 40px 0;">
+  <h1 style="font-weight: 800; font-size: 2.8rem; margin-bottom: 10px;">
+    Hi, I'm <span style="color: var(--link-color);">EunAe Kim</span>
+  </h1>
+  <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">
     <strong>DevOps Engineer</strong> · Multi-Cloud (NCP · GCP · AWS)<br>
     From Zero to Engineer
   </p>
 
-  <div class="home-buttons d-flex justify-content-center flex-wrap mt-4">
-    <a href="/assets/cv/EunAe_Kim_CV.pdf" class="btn-custom btn-cv" target="_blank">
+  <div style="display: flex; justify-content: center; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
+    <a href="/assets/cv/EunAe_Kim_CV.pdf" target="_blank" 
+       style="background: var(--card-bg); color: var(--link-color); border: 1px solid var(--link-color); padding: 10px 25px; border-radius: 8px; font-weight: 700; text-decoration: none;">
       <i class="fas fa-file-pdf"></i> CV
     </a>
-    <a href="/assets/cv/EunAe_Kim_CV.pdf" class="btn-custom btn-cert" target="_blank">
+    <a href="/assets/cv/EunAe_Kim_CV.pdf" target="_blank" 
+       style="background: var(--link-color); color: #fff; padding: 10px 25px; border-radius: 8px; font-weight: 700; text-decoration: none;">
       <i class="fas fa-award"></i> Certification
     </a>
   </div>
-</section>
+</div>
 
-<hr style="opacity: 0.1; margin: 3rem 0;">
+<hr style="opacity: 0.1; margin: 40px 0;">
 
-<section class="portfolio-section">
-  <h2 class="text-center mb-4" style="font-weight: 800;">Portfolio</h2>
-  <div class="portfolio-grid">
-    <a href="/portfolio/ncp/" class="portfolio-card">
-      <h3><i class="fas fa-server me-2"></i>NCP</h3>
-      <p>Jenkins · Docker · NAT Gateway</p>
-    </a>
-    <a href="/portfolio/gcp/" class="portfolio-card">
-      <h3><i class="fab fa-google-cloud me-2"></i>GCP</h3>
-      <p>GKE · GitHub Actions · Cloud Run</p>
-    </a>
-    <a href="/portfolio/aws/" class="portfolio-card">
-      <h3><i class="fab fa-aws me-2"></i>AWS</h3>
-      <p>ECS · ALB · Terraform · S3</p>
-    </a>
-  </div>
-</section>
+<h2 style="text-align: center; font-weight: 800; margin-bottom: 30px;">Portfolio</h2>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+  
+  <a href="/portfolio/ncp/" style="background: var(--card-bg); padding: 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); text-decoration: none; transition: 0.3s;">
+    <h3 style="color: var(--link-color); margin-top: 0;"><i class="fas fa-server"></i> NCP</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Jenkins · Docker · NAT Gateway</p>
+  </a>
+
+  <a href="/portfolio/gcp/" style="background: var(--card-bg); padding: 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); text-decoration: none; transition: 0.3s;">
+    <h3 style="color: var(--link-color); margin-top: 0;"><i class="fab fa-google-cloud"></i> GCP</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">GKE · GitHub Actions · Cloud Run</p>
+  </a>
+
+  <a href="/portfolio/aws/" style="background: var(--card-bg); padding: 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); text-decoration: none; transition: 0.3s;">
+    <h3 style="color: var(--link-color); margin-top: 0;"><i class="fab fa-aws"></i> AWS</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">ECS · ALB · Terraform · S3</p>
+  </a>
+
+</div>
