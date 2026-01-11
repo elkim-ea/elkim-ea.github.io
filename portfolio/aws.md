@@ -68,7 +68,7 @@ while resources requiring frequent operational changes are managed through CI/CD
 
 GitHub Actions Execution Result
 
-<img src="./docs(eng)/github-actions-runs.png" width="700">
+<img src="/assets/img/portfolio/github-actions-runs.png" width="700">
 
 ## 3. Terraform-Based Infrastructure as Code (IaC)
 
@@ -129,11 +129,11 @@ resource "aws_vpc" "main" {
 
 Terraform Apply Success Screen
 
-<img src="./docs(eng)/terraform-apply-success.png" width="700">
+<img src="/assets/img/portfolio/terraform-apply-success.png" width="700">
 
 Terraform File Structure
 
-<img src="./docs(eng)/terraform-aws-tree.png" width="700">
+<img src="/assets/img/portfolio/terraform-aws-tree.png" width="700">
 
 
 ## 4. AWS Network Architecture (Terraform Redesign)
@@ -150,7 +150,7 @@ the network infrastructure was rebuilt using Terraform.
 | Cloud | AWS |
 | Region | ap-northeast-2 (Seoul) |
 
-<img src="./docs(eng)/aws-account-region.png" width="700">
+<img src="/assets/img/portfolio/aws-account-region.png" width="700">
 
 ### ✔ 4-2) VPC Configuration (Terraform)
 
@@ -159,7 +159,7 @@ the network infrastructure was rebuilt using Terraform.
 | VPC Name | matcha-vpc |
 | CIDR | 10.0.0.0/16 |
 
-<img src="./docs(eng)/aws-vpc-list.png" width="700">
+<img src="/assets/img/portfolio/aws-vpc-list.png" width="700">
 
 ### ✔ 4-3) Subnet Configuration
 
@@ -168,7 +168,7 @@ the network infrastructure was rebuilt using Terraform.
 | Public Subnet | a / c | 10.0.1.0/24, 10.0.2.0/24 | ALB, NAT Gateway |
 | Private Subnet | a / c | 10.0.11.0/24, 10.0.12.0/24 | ECS Fargate, RDS |
 
-<img src="./docs(eng)/aws-subnet-list.png" width="700">
+<img src="/assets/img/portfolio/aws-subnet-list.png" width="700">
 
 #### 🔹 Design Points
 
@@ -187,7 +187,7 @@ the network infrastructure was rebuilt using Terraform.
 | vpce-sg | VPC Endpoint | Control VPC Endpoint access |
 | default | Default | Intentionally unused |
 
-<img src="./docs(eng)/aws-security-group.png" width="700">
+<img src="/assets/img/portfolio/aws-security-group.png" width="700">
 
 - Backend ECS is accessible **only through ALB**
 - RDS is accessible **only from ECS Task Security Groups**
@@ -201,8 +201,8 @@ the network infrastructure was rebuilt using Terraform.
 
 Application deployment is fully automated using GitHub Actions.
 
-<img src="./docs(eng)/github-secrets-aws.png" width="700">
-<img src="./docs(eng)/aws-ecr-images.png" width="700">
+<img src="/assets/img/portfolio/github-secrets-aws.png" width="700">
+<img src="/assets/img/portfolio/aws-ecr-images.png" width="700">
 
 ### ✔ CI/CD Responsibility Separation
 
@@ -258,8 +258,8 @@ By choosing Fargate:
 - Launch Type: **Fargate**
 - Network Mode: `awsvpc`
 
-<img src="./docs(eng)/aws-ecs-cluster.png" width="700">
-<img src="./docs(eng)/aws-ecs-service-running.png" width="700">
+<img src="/assets/img/portfolio/aws-ecs-cluster.png" width="700">
+<img src="/assets/img/portfolio/aws-ecs-service-running.png" width="700">
 
 The ECS Service handles:
 
@@ -280,7 +280,7 @@ The ECS Task Definition represents the execution unit for the backend applicatio
 - Health Check Path: `/actuator/health`  
 - Logging: Integrated with CloudWatch Logs  
 
-<img src="./docs(eng)/aws-task-definition.png" width="700">
+<img src="/assets/img/portfolio/aws-task-definition.png" width="700">
 
 Task Definitions are managed by **revision**,  
 allowing immediate rollback to a previous revision in case of deployment failure.
@@ -295,8 +295,8 @@ The ECS Service uses a **rolling update strategy**:
 4. Traffic is routed after ALB health checks pass  
 5. Existing tasks are drained and terminated  
 
-<img src="./docs(eng)/aws-alb-target-group.png" width="700">
-<img src="./docs(eng)/aws-alb-healthcheck.png" width="700">
+<img src="/assets/img/portfolio/aws-alb-target-group.png" width="700">
+<img src="/assets/img/portfolio/aws-alb-healthcheck.png" width="700">
 
 If a health check fails,  
 traffic remains on the existing tasks, ensuring **no service interruption**.
@@ -308,7 +308,7 @@ Current Implementation: Database credentials and AWS API keys are managed using 
 
 Security Roadmap: To achieve enterprise-grade security, there is a plan to migrate to AWS Secrets Manager. This will allow for automatic secret rotation and centralized auditing, further reducing the risk of credential exposure.
 
-<img src="./docs(eng)/aws-iam.png" width="700">
+<img src="/assets/img/portfolio/aws-iam.png" width="700">
 
 ## 7. Service Results and Validation
 
@@ -319,19 +319,19 @@ the service was verified to be operating correctly in production.
 
 https://matchaworld.shop
 
-<img src="./docs(eng)/aws-result-frontend.png" width="700">
+<img src="/assets/img/portfolio/aws-result-frontend.png" width="700">
 
 ### Backend API (CloudWatch)
 
-<img src="./docs(eng)/aws-result-backend-api.png" width="700">
+<img src="/assets/img/portfolio/aws-result-backend-api.png" width="700">
 
 ### Request Flow
 
 Frontend: Client → Route53 → CloudFront → S3
 Backend:  Client → Route53 → ALB → ECS Task → RDS
 
-<img src="./docs(eng)/aws-result-login.png" width="700">
-<img src="./docs(eng)/aws-result-admin.png" width="700">
+<img src="/assets/img/portfolio/aws-result-login.png" width="700">
+<img src="/assets/img/portfolio/aws-result-admin.png" width="700">
 
 DNS records are intentionally excluded from CI/CD automation,
 as Route 53 serves as a stable traffic entry point rather than a deployment target.

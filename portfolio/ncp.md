@@ -180,7 +180,7 @@ services:
 
 docker-compose execution
 
-<img src="./docs(eng)/docker-compose-run.png" width="700">
+<img src="/assets/img/portfolio/docker-compose-run.png" width="700">
 
 ## 🌐 7. LoadBalancer Configuration
 | Item	| Value |       
@@ -191,15 +191,15 @@ docker-compose execution
 
 LB Health Check
 
-<img src="./docs(eng)/lb1.png" width="700">
-<img src="./docs(eng)/lb2.png" width="700">
-<img src="./docs(eng)/lb3.png" width="700">
-<img src="./docs(eng)/lb4.png" width="700">
+<img src="/assets/img/portfolio/lb1.png" width="700">
+<img src="/assets/img/portfolio/lb2.png" width="700">
+<img src="/assets/img/portfolio/lb3.png" width="700">
+<img src="/assets/img/portfolio/lb4.png" width="700">
 
 ## 8. Service Result Screens
-<img src="./docs(eng)/web1.png" width="700">
-<img src="./docs(eng)/web2.png" width="700"> 
-<img src="./docs(eng)/web3.png" width="700">
+<img src="/assets/img/portfolio/web1.png" width="700">
+<img src="/assets/img/portfolio/web2.png" width="700"> 
+<img src="/assets/img/portfolio/web3.png" width="700">
 
 ## 9. Project Structure
 PORTFOLIO         
