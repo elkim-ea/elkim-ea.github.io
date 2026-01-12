@@ -358,11 +358,4 @@ PORTFOLIO
  │   └── backend
  └── README.md
 ```
-
-## Key Summary
-
-✔ Experience operating serverless containers with ECS Fargate                
-✔ CI/CD automation using GitHub Actions                         
-✔ Recognized the absence of IaC as a problem and redesigned infrastructure using Terraform                       
-✔ Understood the limitations of console-driven AWS environments and improved them structurally                         
-✔ Designed a DevOps-oriented architecture with operations, security, and reproducibility in mind                    
+                 

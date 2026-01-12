@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: post
 title: "1. Jenkins_NCP (Naver Cloud) 생성하기 "
 date: 2025-09-03
@@ -96,4 +96,4 @@ Moving forward, I plan to continue reviewing the lessons I learn in class on my 
 <!-- <img scr="" alt="alt text" width="500"> -->
 
 
----
+--- -->

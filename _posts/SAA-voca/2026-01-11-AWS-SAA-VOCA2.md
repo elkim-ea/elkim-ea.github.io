@@ -35,3 +35,15 @@ categories:
 - Knobs : Settings or configuration options that you can adjust (tune) to control how a system behaves.
 
 - Configuration : The settings, options, and values that define how a system, application, or service behaves.
+
+- Redirect : To send a request or user to a different location - such as a new URL, server, or resource.
+
+- Dynamic port : A port number that is assigned automatically by the system or service at runtime, instead of being fixed.
+
+- Ultra-low : Extremely low.
+
+- Static : Something that is fixed, unchanging, or does not move or update automatically.
+
+- Whitelist : A list of approved items or entities (like IP addresses, users, or domains) that are allowed access to a system, service, or resource.
+
+- Imbalance : A lack of balance.

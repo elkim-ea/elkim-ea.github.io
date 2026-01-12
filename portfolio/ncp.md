@@ -3,7 +3,7 @@ layout: page
 title: NCP Portfolio
 permalink: /portfolio/ncp/
 ---
-# 🚀 DevOps CI/CD Pipeline on Naver Cloud Platform (NCP)
+# DevOps CI/CD Pipeline on Naver Cloud Platform (NCP)
 
 React + Spring Boot + Docker + Jenkins + LoadBalancer + NAT Gateway
 
@@ -14,7 +14,7 @@ Jenkins is deployed in a **Public Subnet**, while the production Deploy Server r
 The Backend is exposed externally through a **Load Balancer**, and the Frontend runs internally on port 80 inside the Deploy Server (Internal Only).
 
 
-## 📌 1. Architecture Overview
+## 1. Architecture Overview
 
 Below is the complete CI/CD workflow:
 
@@ -202,6 +202,8 @@ LB Health Check
 <img src="/assets/img/portfolio/web3.png" width="700">
 
 ## 9. Project Structure
+
+```text
 PORTFOLIO         
  ├── Deploy             
  │    ├── AWS          
@@ -209,12 +211,6 @@ PORTFOLIO
  │    └── NCP   ← This document           
  ├── Matcha     ← ESG FullStack App               
  ├── Jenkinsfile          
- └── README.md                 
-
-## 10. Key Takeaways
-✔ Practical DevOps CI/CD environment on NCP             
-✔ Jenkins Public + Deploy Private architecture (secure)             
-✔ NAT Gateway enables outbound communication from private subnet               
-✔ LoadBalancer provides stable backend service              
-✔ Docker-based automated build & deploy pipeline               
-✔ Fully automated workflow: GitHub → Jenkins → Deploy Server → LB                      
+ └── README.md    
+ ```             
+                   
