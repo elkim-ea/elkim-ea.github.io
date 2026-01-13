@@ -10,4 +10,4 @@ categories:
 - [Udemy – AWS Certified Solutions Architect Associate (SAA-C03)](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/?couponCode=CP251120G2)
 
 ---
--
+- d
