@@ -5,7 +5,7 @@ date: 2025-11-19
 categories:
   - "Cloud" 
 ---
-# 🧱 1️⃣ 가상화 및 컴퓨팅 (Virtualization & Compute)
+# 1. 가상화 및 컴퓨팅 (Virtualization & Compute)
 
 ### 1 Virtual Machine (가상 머신)
 - **meaning**: 실제 컴퓨터 안에서 또 다른 가상의 컴퓨터를 만들어 사용하는 기술.  
@@ -71,7 +71,7 @@ categories:
 - **example**: 기업 내 데이터센터.  
 - **sample image**:
   ```
-  🏢 회사 서버실 → 🧑‍💻 직접 관리 & 유지보수
+   회사 서버실 →  직접 관리 & 유지보수
   ```
 
 ---
@@ -144,7 +144,7 @@ categories:
 ---
 
 
-# ☁️ 2️⃣ 클라우드 서비스 모델 및 개념 (Cloud Service Models & Core Concepts)
+# 2. 클라우드 서비스 모델 및 개념 (Cloud Service Models & Core Concepts)
 
 ### 11 Infrastructure as a Service (IaaS)
 - **meaning**: 서버, 네트워크, 스토리지 같은 인프라를 클라우드로 제공하는 서비스.  
@@ -222,7 +222,7 @@ categories:
 - **example**: AWS ap-northeast-2 (서울 리전).  
 - **sample image**:
   ```
-  🌏 세계 지도
+  세계 지도
   ├─ 서울 Region
   ├─ 도쿄 Region
   └─ 프랑크푸르트 Region
@@ -236,7 +236,7 @@ categories:
 - **example**: AWS, Azure, Google Cloud, Naver Cloud.  
 - **sample image**:
   ```
-  ☁️ AWS | ☁️ GCP | ☁️ Azure | ☁️ NCP
+  AWS | GCP | Azure | NCP
   ```
 
 ---
@@ -266,7 +266,7 @@ categories:
     ├─ AZ b
     └─ AZ c
 
-# 🌐 3️⃣ 네트워크 및 보안 (Networking & Security)
+# 3. 네트워크 및 보안 (Networking & Security)
 
 ---
 
@@ -276,7 +276,7 @@ categories:
 - **example**: AWS VPC, Naver Cloud VPC.  
 - **sample image**:
   ```
-  ☁️ Cloud
+  Cloud
    └─ VPC (내 전용 네트워크)
        ├─ Subnet A
        └─ Subnet B
@@ -326,7 +326,7 @@ categories:
 - **example**: AWS Internet Gateway.  
 - **sample image**:
   ```
-  [VPC 내부] ↔ [Internet Gateway] ↔ 🌍 Internet
+  [VPC 내부] ↔ [Internet Gateway] ↔ Internet
   ```
 
 ---
@@ -389,11 +389,11 @@ categories:
 - **example**: AWS Network Firewall, Cisco Firewall.  
 - **sample image**:
   ```
-  🌍 Internet → [Firewall] → 🖥️ Internal Network
+  Internet → [Firewall] → Internal Network
   
 ---
 
-# 🔐 4️⃣ 보안 확장 및 스토리지 시작 (Security Extension & Storage Intro)
+# 4. 보안 확장 및 스토리지 시작 (Security Extension & Storage Intro)
 
 ### 31 VPN (Virtual Private Network)
 - **meaning**: 외부에서 안전하게 내부 네트워크에 접속할 수 있게 해주는 암호화된 통신 기술.  
@@ -401,7 +401,7 @@ categories:
 - **example**: OpenVPN, Cisco AnyConnect, AWS Client VPN.  
 - **sample image**:
   ```
-  🏠 Home → 🔒 VPN Tunnel → 🏢 Company Network
+  Home → VPN Tunnel → Company Network
   ```
 
 ---
@@ -412,7 +412,7 @@ categories:
 - **example**: AWS IAM, Naver Cloud IAM.  
 - **sample image**:
   ```
-  👤 User → [IAM Policy] → 접근 허용/거부 결정
+  User → [IAM Policy] → 접근 허용/거부 결정
   ```
 
 ---
@@ -423,7 +423,7 @@ categories:
 - **example**: Google Authenticator, AWS MFA.  
 - **sample image**:
   ```
-  로그인 → 🔑 비밀번호 + 📱 OTP 코드
+  로그인 → 비밀번호 + OTP 코드
   ```
 
 ---
@@ -471,8 +471,8 @@ categories:
 - **example**: AWS EC2 SSH Key (.pem 파일).  
 - **sample image**:
   ```
-  🔑 Private Key (내 PC)
-  🔒 Public Key (서버)
+  Private Key (내 PC)
+  Public Key (서버)
   연결 시 인증
   ```
 
@@ -495,7 +495,7 @@ categories:
 - **example**: AWS KMS, Google Cloud KMS.  
 - **sample image**:
   ```
-  🔐 Data → [KMS Key Encrypt] → 🔒 Ciphertext
+  Data → [KMS Key Encrypt] → Ciphertext
   ```
 
 ---
@@ -506,11 +506,11 @@ categories:
 - **example**: AES-256, RSA 암호화.  
 - **sample image**:
   ```
-  Plain Text → 🔐 Encryption → Cipher Text
+  Plain Text → Encryption → Cipher Text
   
 ---
 
-# 💾 5️⃣ 스토리지 및 데이터 관리 (Storage & Data Management)
+# 5. 스토리지 및 데이터 관리 (Storage & Data Management)
 
 ---
 
@@ -554,7 +554,7 @@ categories:
 - **example**: DB 백업, Snapshot 백업.  
 - **sample image**:
   ```
-  📂 Original Data → 📦 Backup Copy
+  Original Data → Backup Copy
   ```
 
 ---
@@ -565,8 +565,8 @@ categories:
 - **example**: AWS Glacier, NCP Archive Storage.  
 - **sample image**:
   ```
-  🔹 Hot Data → S3
-  🔹 Cold Data → Glacier (Archive)
+  - Hot Data → S3
+  - Cold Data → Glacier (Archive)
   ```
 
 ---

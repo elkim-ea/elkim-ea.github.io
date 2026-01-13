@@ -5,7 +5,7 @@ date: 2025-11-19
 categories:
   - "Cloud" 
 ---
-# 🐳 6️⃣ 컨테이너 및 오케스트레이션 (Containerization & Orchestration)
+# 6. 컨테이너 및 오케스트레이션 (Containerization & Orchestration)
 
 ### 51 Container (컨테이너)
 - **meaning**: 애플리케이션과 실행 환경을 함께 묶은 독립 실행 단위.  
@@ -24,7 +24,7 @@ categories:
 - **example**: Docker Engine, Docker Desktop.  
 - **sample image**:
   ```
-  🐳 Docker → Build → Ship → Run
+  Docker → Build → Ship → Run
   ```
 
 ---
@@ -132,7 +132,7 @@ categories:
   
 ---
 
-# ⚙️ 7️⃣ 배포 자동화 및 CI/CD 파이프라인 (Automation & CI/CD Pipeline)
+# 7. 배포 자동화 및 CI/CD 파이프라인 (Automation & CI/CD Pipeline)
 
 ### 61 Helm (헬름)
 - **meaning**: 쿠버네티스에서 애플리케이션 배포를 간소화하는 패키지 관리자.  
@@ -244,7 +244,7 @@ categories:
 
 ---
 
-# ⚙️ 8️⃣ 자동화 확장 및 배포 전략 (Advanced Automation & Deployment Strategies)
+# 8. 자동화 확장 및 배포 전략 (Advanced Automation & Deployment Strategies)
 
 ---
 
@@ -361,7 +361,7 @@ categories:
   
 ---
 
-# 📈 9️⃣ 모니터링 · 로그 · 관찰성 (Monitoring, Logging & Observability)
+# 9. 모니터링 · 로그 · 관찰성 (Monitoring, Logging & Observability)
 
 ---
 
@@ -394,8 +394,8 @@ categories:
 - **example**: Grafana Dashboard, Alert 설정.  
 - **sample image**:
   ```
-  📊 CPU 사용률 그래프
-  📈 네트워크 트래픽 차트
+  CPU 사용률 그래프
+  네트워크 트래픽 차트
   ```
 
 ---
@@ -439,7 +439,7 @@ categories:
 - **example**: Grafana Dashboard, CloudWatch Dashboard.  
 - **sample image**:
   ```
-  🖥️ Dashboard → CPU 40%, Memory 60%, Disk 70%
+  Dashboard → CPU 40%, Memory 60%, Disk 70%
   ```
 
 ---
@@ -476,7 +476,7 @@ categories:
   
 ---
 
-# 🧠 🔟 아키텍처 & 고가용성 (Architecture & High Availability)
+# 10 아키텍처 & 고가용성 (Architecture & High Availability)
 
 ---
 
@@ -486,7 +486,7 @@ categories:
 - **example**: CloudFront, Akamai, Cloudflare CDN.  
 - **sample image**:
   ```
-  Origin Server → 🌍 글로벌 CDN 엣지 → 사용자 (지연시간 감소)
+  Origin Server → 글로벌 CDN 엣지 → 사용자 (지연시간 감소)
   ```
 
 ---
@@ -596,7 +596,7 @@ categories:
   
 ---
 
-# 🌍 1️⃣1️⃣ 서버리스 · 엣지 컴퓨팅 · 메시지큐 · 버전 관리 (Serverless, Edge Computing, MQ & Version Control)
+# 11. 서버리스 · 엣지 컴퓨팅 · 메시지큐 · 버전 관리 (Serverless, Edge Computing, MQ & Version Control)
 
 ---
 
@@ -674,7 +674,7 @@ categories:
 - **example**: CloudWatch, Prometheus.  
 - **sample image**:
   ```
-  📊 CPU 80% → Alert → 관리자 확인
+  CPU 80% → Alert → 관리자 확인
   ```
 
 ---
@@ -707,7 +707,7 @@ categories:
 - **example**: AWS Bastion Host, NCP Jump Server.  
 - **sample image**:
   ```
-  🧑‍💻 User → Bastion Host → Private Server
-  
+  User → Bastion Host → Private Server
+  ```
 
 ---

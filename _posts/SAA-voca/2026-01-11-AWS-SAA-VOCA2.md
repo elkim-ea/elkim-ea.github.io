@@ -47,3 +47,29 @@ categories:
 - Whitelist : A list of approved items or entities (like IP addresses, users, or domains) that are allowed access to a system, service, or resource.
 
 - Imbalance : A lack of balance.
+
+- Alternatively : Another option or choice.
+
+- Legacy clients : Older software or systems (clients) that were built using outdated technology, but are still being used today.
+
+- SSL handshake : A process where a client (like your browser) and a server ( like a website or API) agree on how to securely communicate using encryption.
+
+- Older gen : Previous versions of hardware or software that have since been replaced by newer, more powerful options.
+
+- Connection Draining : A process that allows exiting connections to finsh before removing or stopping a server (or instance) from the load balanceer.
+
+- Deregistration Delay : The amount of time a load balancer waits before closing connections to a target (like an EC2 instance) after it's been removed from the target group.
+
+- Metric : A measurable value that tells you how a system is performing or what's happening inside your application, infrastructure, or services.
+
+- Scale-out : Adding more instances or nodes to a system to handle increased load.
+
+- Anticipate : To expect something to happen before it actually does, and prepare for it in advance.
+
+- Capacity : The maximum amount of something that a system or resource can handle, store, or proces.
+
+- Utilization : How much of a resource you are using, compared to how much is available.
+
+- Network bound : A system or process is limited by network speed or bandwidth, not by CPU or memory.
+
+- Cooldown period : A waiting time after a scaling activity (like launching or terminating an instance), during which no other scaling actions can happen.
