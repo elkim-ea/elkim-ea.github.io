@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "1. AWS(SAA) VOCA "
+title: "2. AWS(SAA) VOCA "
 date: 2026-01-11
 categories:
   - "VOCA"
