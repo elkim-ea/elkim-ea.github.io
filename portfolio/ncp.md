@@ -182,7 +182,8 @@ docker-compose execution
 
 <img src="/assets/img/portfolio/docker-compose-run.png" width="700">
 
-## 🌐 7. LoadBalancer Configuration
+## 7. LoadBalancer Configuration
+
 | Item	| Value |       
 |------|-----------------------------|         
 | LB Subnets	| public-subnet-1, public-subnet-2 |           
