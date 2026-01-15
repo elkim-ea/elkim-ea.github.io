@@ -38,4 +38,56 @@ categories:
 
 - Underlying Database : The actual database system that is used behind the scenes to store and manage data — even if you're using a service that hides the technical details.
 
-- 
+- Instantaneous : Happening immediately, with no noticeable delay — it feels almost faster than real-time.
+
+- Increments : Small steps or increases in amount, size, or value — usually done gradually or repeatedly.
+
+- Peer-to-Peer : A network model where each device (peer) can communicate directly with other devices — without needing a central server.
+
+- Stripe : In storage systems, a stripe is a way of splitting data across multiple drives to improve speed and performance.
+
+- Fail-over : Automatically switching to a backup system when the main one fails.
+
+- Recovery : The process of getting systems or data back after failure.
+
+- Isolation : Keeping systems or environments separated to avoid problems spreading.
+
+- Compliance : Following rules, laws, or standards (like security, data privacy).
+
+- Zero Downtime : No service interruption during updates or failures.
+
+- Advanced : More powerful or complex features beyond basic.
+
+- Routine : Regular, scheduled processes or tasks.
+
+- Maintenance : Work to keep systems running smoothly, like updates or checks.
+
+- Restore data : To bring back lost or deleted data from a backup.
+
+- Defining : To clearly set or describe something — like a setting, value, rule, or structure.
+
+- Instantitation : The act of creating an instance of something — like a resource, class, or service.
+
+- Infrequent : Happens rarely — not common or regular.
+
+- Intermittent : Happens sometimes, not consistently — it comes and goes.
+
+- Disaster : A major failure or unexpected event that causes serious service interruption or data loss.
+
+- Interruption : A pause, break, or unexpected stop in a system, service, or process.
+
+- Secondary : Something that is used as a backup or comes after the primary system.
+
+- Pause : To temporarily stop something, with the option to resume later.
+
+- Resume : To start again after something was paused or stopped.
+
+- Integration : Connecting different systems or services so they can work together smoothly.
+
+- Sentiment : The feeling or opinion expressed in text — like positive, negative, or neutral.
+
+- Comprehend : A fully managed NLP (Natural Language Processing) service by AWS that can analyze and understand text.
+
+- SageMaker : A machine learning platform to build, train, and deploy models at scale.
+
+- Fraud Detection : Using AI or logic to find unusual or suspicious behavior, such as fake transactions or attacks.
