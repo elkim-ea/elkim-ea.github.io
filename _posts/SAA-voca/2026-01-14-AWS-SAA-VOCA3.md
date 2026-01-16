@@ -91,3 +91,19 @@ categories:
 - SageMaker : A machine learning platform to build, train, and deploy models at scale.
 
 - Fraud Detection : Using AI or logic to find unusual or suspicious behavior, such as fake transactions or attacks.
+
+- Babelfish : It is a feature of Amazon Aurora PostgreSQL that allows it to understand SQL Server commands — so you can run SQL Server applications on Aurora without rewriting all your code.
+
+- Command : An instruction you give to a computer or system to do something — like run a program, create a file, or manage cloud resources.
+
+- Retention : It usually means how long data is stored (kept) before it is deleted.
+
+- Proxy : A middle helper that passes requests between a user and another server.
+
+- Intensive : Uses a lot of resources (like CPU, memory, power, time).
+
+- Retrieves : Gets something back (like data or files).
+
+- Authentication : Checking who you are before giving access.
+
+- Stale : Old and not fresh (usually for data or cache).
