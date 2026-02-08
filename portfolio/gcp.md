@@ -1,152 +1,161 @@
-<!-- ---
+---
 layout: page
 title: GCP Portfolio
 permalink: /portfolio/gcp/
 ---
-## GCP 기반 Kubernetes (GKE Autopilot) CI/CD 배포 구축
 
-React(Vite) + Spring Boot + MariaDB + Docker + GitHub Actions + Artifact Registry(GAR) + GKE Autopilot + External LoadBalancer + Cloud NAT
+## GCP-Based Kubernetes (GKE Autopilot) CI/CD Deployment
 
-본 프로젝트는 **Google Cloud Platform(GCP)** 환경에서  
-Frontend(React/Vite) + Backend(Spring Boot) + DB(MariaDB)를 **GKE Autopilot(Kubernetes)** 로 운영하고,  
-GitHub Actions로 **자동 빌드/배포(CI/CD)** 까지 구성한 실전형 DevOps
+React (Vite) + Spring Boot + MariaDB + Docker + GitHub Actions + Artifact Registry (GAR) + GKE Autopilot + External LoadBalancer + Cloud NAT
 
-- Source Push 발생 → GitHub Actions 트리거  
-- Docker 이미지 빌드 → Artifact Registry(GAR) Push  
-- GKE Autopilot 배포 적용 → **Runtime에서 이미지 Pull**  
-- Frontend/Backend는 각각 **Service type LoadBalancer** 로 외부 공개  
-- 클러스터의 Outbound 트래픽은 **Cloud NAT** 기반으로 처리(Private egress)
+This project is a **hands-on DevOps implementation** built on **Google Cloud Platform (GCP)**.  
+It operates a **Frontend (React/Vite)**, **Backend (Spring Boot)**, and **Database (MariaDB)** on **GKE Autopilot (Kubernetes)**,  
+with a fully automated **CI/CD pipeline using GitHub Actions**.
 
-
-## 1. 전체 아키텍처 개요
-
-아래는 시스템의 전체 CI/CD 및 Runtime 흐름을 요약한 아키텍처         
-(점선 = CI/CD, 실선 = Runtime 트래픽/동작)
-
-**GKE Autopilot 최종 아키텍처 다이어그램**  
-
-<img src="./docs/architecture-gke-final.png" width="800">
+- Source push → GitHub Actions trigger  
+- Docker image build → Push to Artifact Registry (GAR)  
+- Deployment to GKE Autopilot → **Runtime image pull by the cluster**  
+- Frontend / Backend exposed externally via **Service type: LoadBalancer**  
+- Cluster outbound traffic handled via **Cloud NAT (private egress only)**  
 
 
-## 2. CI/CD + Runtime 전체 동작 흐름
+## 1. Overall Architecture Overview
 
-### ✔ 전체 동작 흐름 (번호 기준)
+The diagram below summarizes the complete **CI/CD and runtime flow** of the system  
+(Dashed lines = CI/CD, Solid lines = Runtime traffic/operations)
 
-| 번호 | 동작 |
-|------|-------------------------------------------------------------|
-| 1 | Source Push 발생 (GitHub Repository) |
-| 2 | GitHub Actions Workflow 트리거 |
-| 3 | GitHub Actions에서 Docker Build (Frontend/Backend) |
-| 4 | Docker 이미지를 Artifact Registry(GAR)로 Push |
-| 5 | GKE Autopilot에서 **Runtime Image Pull** (Pod 생성/재시작/롤링업데이트 시) |
-| 6 | Client → Frontend External LoadBalancer로 접속 |
-| 7 | Client/Admin → Backend External LoadBalancer로 API 접근 |
-| 8 | Frontend Pod → Backend Pod (Internal API 호출) |
-| 9 | Backend Pod → DB Pod (DB Internal) |
-| 10 | Pod → Cloud NAT → Internet (Outbound Only) |
+**Final GKE Autopilot Architecture Diagram**
 
-> 포인트: **Image Pull은 CI/CD가 아니라 Runtime 동작**이므로, 점선이 아니라 **실선**으로 표현
+<img src="/assets/img/portfolio/architecture-gke-final.png" width="800">
 
 
-## 3. GCP 리소스 구성 (Project / Network / Registry / GKE)
+## 2. End-to-End CI/CD and Runtime Flow
 
-### ✔ 3-1) Project 정보
+### ✔ Overall Flow (Step-by-step)
 
-| 항목 | 값 |
+| Step | Description |
+|------|-------------|
+| 1 | Source code push to GitHub repository |
+| 2 | GitHub Actions workflow triggered |
+| 3 | Docker images built in GitHub Actions (Frontend / Backend) |
+| 4 | Docker images pushed to Artifact Registry (GAR) |
+| 5 | **Runtime image pull by GKE Autopilot** (during Pod creation/restart/rolling update) |
+| 6 | Client → Frontend External LoadBalancer |
+| 7 | Client/Admin → Backend External LoadBalancer (API access) |
+| 8 | Frontend Pod → Backend Pod (internal API call) |
+| 9 | Backend Pod → DB Pod (internal DB access) |
+| 10 | Pod → Cloud NAT → Internet (Outbound only) |
+
+> **Note:** Image pulling is a **runtime operation**, not part of CI/CD.  
+> Therefore, it is represented as a **solid line**, not a dashed line.
+
+
+## 3. GCP Resource Configuration (Project / Network / Registry / GKE)
+
+### ✔ 3-1) Project Information
+
+| Item | Value |
 |------|--------------------|
 | Project Name | matcha |
 | Project ID | matcha-480312 |
 | Region | asia-northeast3 |
 
-Project 정보 이미지  
+Project information screenshot
 
-<img src="./docs/gcp-project-info.png" width="700">
+<img src="/assets/img/portfolio/gcp-project-info.png" width="700">
 
-### ✔ 3-2) VPC / Subnet 구성
 
-| 항목 | 값 |
+### ✔ 3-2) VPC / Subnet Configuration
+
+| Item | Value |
 |------|--------------------|
 | VPC | matcha-vpc (custom) |
 | Region | asia-northeast3 |
 
-#### ✔ Subnet 구성
-| Subnet | CIDR | 역할 |
-|--------|------|------|
-| matcha-public-subnet | 10.0.1.0/24 | External 진입 지점(LB External IP 개념) |
-| matcha-private-subnet | 10.0.2.0/24 | (Reserved) 향후 Cloud SQL/VM 등 Private 리소스 확장 |
-| matcha-gke-subnet | 10.0.3.0/24 | GKE 노드/서비스 네트워크(클러스터 통신) |
+#### ✔ Subnet Design
+
+| Subnet | CIDR | Purpose |
+|-------|------|---------|
+| matcha-public-subnet | 10.0.1.0/24 | External entry point (LB External IP concept) |
+| matcha-private-subnet | 10.0.2.0/24 | Reserved for future private resources (Cloud SQL / VM) |
+| matcha-gke-subnet | 10.0.3.0/24 | GKE node and service network |
 
 #### ✔ Secondary Range (Pod CIDR)
-| Range | CIDR | 역할 |
-|------|------|------|
-| GKE Pod Secondary Range | 10.219.0.0/17 | Pod IP 전용 |
 
-Subnet / Secondary Range UI 이미지  
+| Range | CIDR | Purpose |
+|------|------|---------|
+| GKE Pod Secondary Range | 10.219.0.0/17 | Dedicated Pod IP range |
 
-<img src="./docs/gcp-subnet-list.png" width="700">
+Subnet and secondary range UI
 
-### ✔ 3-3) Cloud NAT (Outbound 전용)
+<img src="/assets/img/portfolio/gcp-subnet-list.png" width="700">
 
-| 항목 | 값 |
+
+### ✔ 3-3) Cloud NAT (Outbound Only)
+
+| Item | Value |
 |------|--------------------|
 | Router | matcha-router |
 | NAT | matcha-nat |
-| 역할 | 클러스터(Private Egress)의 외부 통신 Outbound 처리 |
+| Purpose | Handles outbound internet access for private cluster egress |
 
-Cloud NAT 설정/고정 IP 이미지  
+Cloud NAT configuration / static IP
 
-<img src="./docs/gcp-cloud-nat.png" width="700">
+<img src="/assets/img/portfolio/gcp-cloud-nat.png" width="700">
 
-### ✔ 3-4) Artifact Registry (Docker Images 저장소)
 
-Artifact Registry는 **VPC/Subnet 내부가 아닌 GCP 관리형 서비스**이며,  
-GitHub Actions가 빌드한 이미지를 저장하고 GKE가 Runtime에 Pull
+### ✔ 3-4) Artifact Registry (Docker Image Repository)
 
-| 항목 | 값 |
+Artifact Registry is a **GCP-managed service**, not deployed inside a VPC or subnet.  
+GitHub Actions pushes images to GAR, and GKE pulls them at runtime.
+
+| Item | Value |
 |------|--------------------|
-| 서비스 | Artifact Registry (GAR) |
-| Repo | matcha-repo |
-| 내용 | Frontend / Backend Docker Images |
-| 흐름 | Actions/Docker → GAR(push), GKE → GAR(pull) |
+| Service | Artifact Registry (GAR) |
+| Repository | matcha-repo |
+| Content | Frontend / Backend Docker images |
+| Flow | GitHub Actions → GAR (push), GKE → GAR (pull) |
 
-Artifact Registry 이미지 목록 이미지
+Artifact Registry image list
 
-<img src="./docs/gar-images.png" width="700">
+<img src="/assets/img/portfolio/gar-images.png" width="700">
 
 
-## 4. GitHub Actions CI/CD 구성
+## 4. GitHub Actions CI/CD Configuration
 
-### ✔ 4-1) Actions 실행 결과 (성공 증명)
+### ✔ 4-1) Successful Workflow Runs
 
-Actions Runs 이미지
+GitHub Actions runs (success proof)
 
-<img src="./docs/github-actions-runs.png" width="700">
+<img src="/assets/img/portfolio/gcp-github-actions-runs.png" width="700">
 
-### ✔ 4-2) Repository Secrets 구성
 
-| Secret Name | 설명 |
-|------------|------|
+### ✔ 4-2) Repository Secrets
+
+| Secret Name | Description |
+|------------|-------------|
 | GCP_PROJECT_ID | GCP Project ID |
-| GCP_SA_KEY | Service Account JSON Key |
-| GKE_CLUSTER | GKE Cluster 이름 |
-| GKE_LOCATION | GKE Region |
-| GAR_REPO | Artifact Registry Repository |
-| API_BASE_URL | FE에서 호출할 Backend Base URL |
-| IMG_BASE_URL | 업로드 이미지 Base URL |
+| GCP_SA_KEY | Service Account JSON key |
+| GKE_CLUSTER | GKE cluster name |
+| GKE_LOCATION | GKE region |
+| GAR_REPO | Artifact Registry repository |
+| API_BASE_URL | Backend base URL for frontend |
+| IMG_BASE_URL | Image upload base URL |
 
-GitHub Secrets 설정 이미지  
+GitHub Secrets configuration
 
-<img src="./docs/github-secrets.png" width="700">
+<img src="/assets/img/portfolio/github-secrets.png" width="700">
 
-### ✔ 4-3) Workflow 동작 요약
 
-1) Checkout  
-2) GCP 인증 (SA Key)  
-3) Docker Build  
-4) GAR Push  
-5) GKE Credentials 획득  
-6) kubectl apply로 배포  
-7) 롤아웃/상태 확인
+### ✔ 4-3) Workflow Summary
+
+1) Checkout source  
+2) Authenticate to GCP (Service Account)  
+3) Docker build  
+4) Push images to GAR  
+5) Obtain GKE credentials  
+6) Deploy via `kubectl apply`  
+7) Verify rollout and status  
 
 ```yaml
 name: Deploy to GKE Autopilot
@@ -191,49 +200,58 @@ jobs:
         run: kubectl apply -f Deploy/GCP/k8s/
 ```
 
-## 5. Kubernetes 리소스 구성 (GKE Autopilot)
+## 5. Kubernetes Resource Design (GKE Autopilot)
 
-GKE Autopilot 환경에서 Frontend / Backend / DB를 각각 Kubernetes 리소스로 분리하여 운영 
-외부 공개가 필요한 Frontend/Backend는 **Service type: LoadBalancer**, DB는 **ClusterIP(Internal Only)** 로 구성
+In the GKE Autopilot environment, the **Frontend**, **Backend**, and **Database** are deployed as separate Kubernetes resources.  
+Components that require external access (Frontend / Backend) are exposed using **Service type: LoadBalancer**,  
+while the database is configured as **internal-only (ClusterIP)**.
 
-### ✔ 5-1) 리소스 구성 요약
+### ✔ 5-1) Resource Summary
 
-| 컴포넌트 | Deployment/Pod | Service Type | 외부 공개 | 설명 |
-|---------|-----------------|-------------|----------|------|
-| Frontend | Deployment / Pod | LoadBalancer | ✅ | 사용자 UI 제공 (External IP) |
-| Backend | Deployment / Pod | LoadBalancer | ✅ | API 제공 (External IP) |
-| DB (MariaDB) | Pod(또는 Stateful 구성) | ClusterIP | ❌ | 내부 통신 전용 |
+| Component | Deployment / Pod | Service Type | Public Access | Description |
+|---------|------------------|--------------|---------------|-------------|
+| Frontend | Deployment / Pod | LoadBalancer | ✅ | Provides user-facing UI via External IP |
+| Backend | Deployment / Pod | LoadBalancer | ✅ | Provides REST API via External IP |
+| DB (MariaDB) | Pod (or Stateful-style) | ClusterIP | ❌ | Internal database, cluster-only access |
 
-`kubectl get pods & kubectl get svc` (실행 증명 External IP / Service 타입 증명) 
+`kubectl get pods` & `kubectl get svc`  
+(Proof of running Pods, Service types, and assigned External IPs)
 
-<img src="./docs/kubectl-svc-pods.png" width="700">
+<img src="/assets/img/portfolio/kubectl-svc-pods.png" width="700">
 
-- **Service(LB)와 Pod를 분리**해서 “외부 진입 지점”을 명확
-- **DB는 외부 노출하지 않고 Cluster 내부 통신(ClusterIP)** 으로만 접근하도록 구성
-- Image Pull은 배포 파이프라인이 아니라 **Pod 생성/재시작/롤링업데이트 시점(Runtime)** 에 발생
+**Key points**
 
-k8s manifest 폴더 구조 이미지  
+- Services (LoadBalancers) are clearly separated from Pods to define **explicit entry points**
+- The database is **not exposed externally** and is accessible only within the cluster
+- Docker image pulling occurs at **runtime** (Pod creation / restart / rolling update), not during CI/CD execution
 
-<img src="./docs/k8s-yaml-tree.png" width="700">
+Kubernetes manifest directory structure
 
-## 6. 서비스 결과 화면 (실제 동작)
+<img src="/assets/img/portfolio/k8s-yaml-tree.png" width="700">
 
-- **Frontend (External LB)**: `http://34.64.88.163/`
-- **Backend (External LB)**: `http://34.64.177.36/`
 
-ESG 소개 페이지  
+## 6. Service Results (Live Validation)
 
-<img src="./docs/result-esg.png" width="700">
+- **Frontend (External LoadBalancer)**  
+  `http://34.64.88.163/`
 
-로그인 화면 / 기능 동작  
+- **Backend (External LoadBalancer)**  
+  `http://34.64.177.36/`
 
-<img src="./docs/result-login.png" width="700">
+### ESG Introduction Page
 
-관리자 페이지(예: 사용자 관리)  
+<img src="/assets/img/portfolio/result-esg.png" width="700">
 
-<img src="./docs/result-admin.png" width="700">
+### Login and Core Feature Validation
 
-## 7. 전체 프로젝트 구조
+<img src="/assets/img/portfolio/result-login.png" width="700">
+
+### Admin Page (e.g., User Management)
+
+<img src="/assets/img/portfolio/result-admin.png" width="700">
+
+
+## 7. Project Structure
 
 ```text
 PORTFOLIO
@@ -242,18 +260,7 @@ PORTFOLIO
  │   ├── GCP
  │   │   ├── k8s
  │   │   ├── docs
- │   │   └── README.md   ← 본 문서
+ │   │   └── README.md   ← This document
  │   └── NCP
- ├── Matcha              ← ESG FullStack App (Frontend/Backend)
+ ├── Matcha              ← ESG Full-Stack Application
  └── README.md
-```
-
-## 8. 핵심 요약
-
-✔ GKE Autopilot 기반 Kubernetes 운영 경험  
-✔ GitHub Actions 기반 CI/CD 자동화 구축 (Build → Push → Deploy)  
-✔ Artifact Registry를 통한 이미지 저장/버전 관리  
-✔ Front/Back을 각각 External LoadBalancer로 외부 공개  
-✔ DB는 Cluster 내부 통신(ClusterIP)으로 보안성 유지  
-✔ Cloud NAT 기반 Outbound 트래픽 제어(Private egress)
- -->
