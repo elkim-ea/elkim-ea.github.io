@@ -1,7 +1,9 @@
 ---
-layout: page
-title: NCP Portfolio
-permalink: /portfolio/ncp/
+layout: post
+title: " 1.Matcha_NCP"
+date: 2026-01-07
+categories:
+  - "portpolio/Matcha/aws"  
 ---
 # DevOps CI/CD Pipeline on Naver Cloud Platform (NCP)
 

@@ -1,9 +1,10 @@
 ---
-layout: page
-title: GCP Portfolio
-permalink: /portfolio/gcp/
+layout: post
+title: " 2.Matcha_GCP"
+date: 2026-01-07
+categories:
+  - "portpolio/Matcha/aws"  
 ---
-
 ## GCP-Based Kubernetes (GKE Autopilot) CI/CD Deployment
 
 React (Vite) + Spring Boot + MariaDB + Docker + GitHub Actions + Artifact Registry (GAR) + GKE Autopilot + External LoadBalancer + Cloud NAT
@@ -264,3 +265,4 @@ PORTFOLIO
  │   └── NCP
  ├── Matcha              ← ESG Full-Stack Application
  └── README.md
+```

@@ -1,7 +1,9 @@
 ---
-layout: page
-title: AWS Portfolio
-permalink: /portfolio/aws/
+layout: post
+title: " 3.Matcha_AWS"
+date: 2026-01-07
+categories:
+  - "portpolio/Matcha/aws"  
 ---
 ## AWS-Based ECS Fargate CI/CD + Terraform (IaC) Implementation
 
