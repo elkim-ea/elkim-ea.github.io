@@ -3,7 +3,7 @@ layout: post
 title: " 2.Matcha_GCP"
 date: 2026-01-07
 categories:
-  - "portpolio/Matcha/aws"  
+  - "Portpolio/Matcha GCP"  
 ---
 ## GCP-Based Kubernetes (GKE Autopilot) CI/CD Deployment
 

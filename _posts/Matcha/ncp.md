@@ -3,7 +3,7 @@ layout: post
 title: " 1.Matcha_NCP"
 date: 2026-01-07
 categories:
-  - "portpolio/Matcha/aws"  
+  - "Portpolio/Matcha NCP"  
 ---
 # DevOps CI/CD Pipeline on Naver Cloud Platform (NCP)
 
